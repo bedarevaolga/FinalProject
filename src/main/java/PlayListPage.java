@@ -75,6 +75,7 @@ public class PlayListPage {
                 action.contextClick(webElement).perform();
                 driver.switchTo();
                 deleteFromPlayList.click();
+                driver.navigate().refresh();
             }
         }
         return this;

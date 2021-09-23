@@ -1,9 +1,14 @@
+import config.Config;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -13,10 +18,12 @@ public class LoginTest {
     public static MainPage mainPage;
     public static WebDriver driver;
     public static PlayListPage playListPage;
-   //public static ConfProperties confProperties = new ConfProperties();
+    private static Properties testProperties;
 
     @BeforeAll
-    public static void testSetup() {
+    public static void testSetup() throws IOException {
+//        testProperties = new Properties();
+     //   testProperties.load(new FileInputStream("src/test/resources/conf.properties"));
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
@@ -24,65 +31,66 @@ public class LoginTest {
         playListPage = new PlayListPage(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-      //  driver.get(ConfProperties.getProperty("mainPage"));
-       driver.get("https://open.spotify.com/");
+       driver.get(Config.getURLMainPage());
+//      driver.get("https://open.spotify.com/");
     }
 
     @Order(1)
     @Test
     public void testLogin() {
         mainPage.login();
-        loginPage.inputLogin("frosja_090@mail.ru");
-        loginPage.inputPasswd("Jktxrf_9");
+        loginPage.inputLogin(Config.USER_LOGIN);
+   //    loginPage.inputLogin(testProperties.getProperty("login"));
+        loginPage.inputPasswd(Config.USER_PASSWORD);
         loginPage.clickLoginBtn();
         String user = mainPage.getUserName();
-        Assertions.assertEquals("Olga Bedareva", user);
+        Assertions.assertEquals(Config.USER_NAME, user);
     }
-//
-//    @Order(2)
-//    @Test
-//    public void testCreatePlayList() {
-//        mainPage.createPlayList();
-//        Assertions.assertEquals("Мой плейлист № 1", playListPage.getPlayListName());
-//    }
-//
-//    @Order(3)
-//    @ParameterizedTest
-//    @CsvSource({"AC/DC, Highway to Hell", "Dido, White Flag", "Madonna, Frozen"})
-//    public void testAddCompositionToPlayList(String artistName, String songName) {
-//
-//        playListPage.addComposition(artistName, songName);
-//        Assertions.assertTrue(playListPage.isCompositionAddedToPlayList(artistName, songName));
-//    }
-//
-//    @Order(4)
-//    @ParameterizedTest
-//    @CsvSource({"Madonna, Frozen"})
-//    public void testDeleteCompositionToPlayList(String artistName, String songName) {
-//        playListPage.deleteComposition(artistName, songName);
-//        Assertions.assertFalse(playListPage.isCompositionAddedToPlayList(artistName, songName));
-//    }
-//
-//    @Order(5)
-//    @ParameterizedTest
-//    @CsvSource({"Мой плейлист № 1"})
-//    public void testDeletePlayList(String namePlayList) {
-//        playListPage.deletePlayList(namePlayList);
-//        Assertions.assertFalse(playListPage.getListOfPlayListName().contains(namePlayList));
-//    }
-//
-//    @Order(6)
-//    @Test
-//    public void testLogout() {
-//        mainPage.entryMenu();
-//        mainPage.userLogout();
-//        Assertions.assertEquals("ВОЙТИ", mainPage.getLoginButton());
-//    }
 
-//    @AfterAll
-//    public static void tearDown() {
-//        driver.quit();
-//    }
+    @Order(2)
+    @Test
+    public void testCreatePlayList() {
+        mainPage.createPlayList();
+        Assertions.assertEquals("Мой плейлист № 1", playListPage.getPlayListName());
+    }
+
+    @Order(3)
+    @ParameterizedTest
+    @CsvSource({"AC/DC, Highway to Hell", "Dido, White Flag", "Madonna, Frozen"})
+    public void testAddCompositionToPlayList(String artistName, String songName) {
+
+        playListPage.addComposition(artistName, songName);
+        Assertions.assertTrue(playListPage.isCompositionAddedToPlayList(artistName, songName));
+    }
+
+    @Order(4)
+    @ParameterizedTest
+    @CsvSource({"Madonna, Frozen"})
+    public void testDeleteCompositionToPlayList(String artistName, String songName) {
+        playListPage.deleteComposition(artistName, songName);
+        Assertions.assertFalse(playListPage.isCompositionAddedToPlayList(artistName, songName));
+    }
+
+    @Order(5)
+    @ParameterizedTest
+    @CsvSource({"Мой плейлист № 1"})
+    public void testDeletePlayList(String namePlayList) {
+        playListPage.deletePlayList(namePlayList);
+        Assertions.assertFalse(playListPage.getListOfPlayListName().contains(namePlayList));
+    }
+
+    @Order(6)
+    @Test
+    public void testLogout() {
+        mainPage.entryMenu();
+        mainPage.userLogout();
+        Assertions.assertEquals("ВОЙТИ", mainPage.getLoginButton());
+    }
+
+    @AfterAll
+    public static void tearDown() {
+        driver.quit();
+    }
 }
 
 

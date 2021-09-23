@@ -1,43 +1,44 @@
 package api;
 
+import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import org.apache.http.HttpStatus;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import net.minidev.json.JSONObject;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import static io.restassured.RestAssured.given;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
 
 public class ApiAutorizationTest {
-    @Test
-    public void testLoginRestAssured() {
-        Map<String, String> params = new HashMap<>();
-        params.put("client_id", "31wkyhvgnyxez4rxsybr7vjbkmdm");
-        params.put("response_type", "code");
-        params.put("redirect_uri", "https://spotify.com/");
-        params.put("grant_type", "authorization_code");
+
+    public final String TOKEN= "BQByvuQNOZOpJpunX2xDuDFHX8b-_nXYVxAiZdhkgTFxBqyaXXYifJJ6DzQePvmMFJ9ZBTJILwCTE" +
+            "aqERCUtx4iFAHu2LBokASTIAK7y0Oh4yUFlN31EnpRMYO47onRDSLCje3rfMQxumEQQjL4THH0QQOXhdOGn7asvGKKKybbb150qA";
 
 
-        String token = given().log().all().header("Authorization", "Basic d2ViYXBwOg==").contentType(ContentType.URLENC).formParams(params)
-                .post("https://accounts.spotify.com/api/token").then().log().all().assertThat()
-                .statusCode(HttpStatus.SC_OK).extract().path("access_token");
+    public void  authorize () throws URISyntaxException, IOException {
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+        HttpGet tokenRequest = new HttpGet("https://spotify.com"); //??
+        URI uri = new URIBuilder(tokenRequest.getURI())
+                .addParameter("token", TOKEN)
+                .build();
+        ((HttpRequestBase) tokenRequest).setURI(uri);
+        HttpResponse response = httpClient.execute(tokenRequest);
+        HttpEntity entity = response.getEntity();
+        String responseString = EntityUtils.toString(entity, "UTF-8");
+        System.out.println(responseString);
 
-        TokenResponse tokenResponse = given()
-                .log()
-                .all()
-                .header("Authorization", "Basic d2ViYXBwOg==")
-                .contentType(ContentType.URLENC)
-                .formParams(params)
-                .post("https://accounts.spotify.com/api/token")
-                .then()
-                .log()
-                .all()
-                .assertThat()
-                .statusCode(HttpStatus.SC_OK)
-                .extract()
-                .as(TokenResponse.class);
-
-        System.out.println(tokenResponse.getAccessToken());
-
-         System.out.println("Rest assured extracted token "+token);
     }
+
 }
