@@ -29,12 +29,29 @@ Feature: Using Spotify
       | пммл - Live        |
       | Знак бесконечность |
 
+  Scenario: Follow a PlayList
+
+   # When a user is logged in Spotify
+    And user is following a PlayList
+      | 1z1i1gzN6vNJxBi2JMMgSj |
+    And get List of PlayLists
+    Then user is finding PlayList from List
+      | Плейлист для бега от TIMERMAN. Part 2 |
+
   Scenario: Change a Playlist's Details
 
     #When a user is logged in Spotify
     And user is Change a Playlist's Name
-#    |Updated Playlist Name|
-#    Then user is checking List of Song
-#      | Хочешь? |
-#      | пммл - Live |
-#      | Знак бесконечность |
+    |Updated Playlist Name 888|
+    And get List of PlayLists
+    Then user is finding PlayList from List
+      | Updated Playlist Name 888 |
+
+  Scenario: Unfollow a  Playlist
+
+    #When a user is logged in Spotify
+    And user is Unfollowing a  Playlist
+      | 1z1i1gzN6vNJxBi2JMMgSj |
+    And get List of PlayLists
+   Then user is checking of removing a  Playlist
+      | Плейлист для бега от TIMERMAN. Part 2 |
