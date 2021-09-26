@@ -23,15 +23,15 @@ import java.net.URISyntaxException;
 
 public class ApiAutorizationTest {
 
-    public final String TOKEN= "BQByvuQNOZOpJpunX2xDuDFHX8b-_nXYVxAiZdhkgTFxBqyaXXYifJJ6DzQePvmMFJ9ZBTJILwCTE" +
-            "aqERCUtx4iFAHu2LBokASTIAK7y0Oh4yUFlN31EnpRMYO47onRDSLCje3rfMQxumEQQjL4THH0QQOXhdOGn7asvGKKKybbb150qA";
+//    public final String TOKEN= "BQByvuQNOZOpJpunX2xDuDFHX8b-_nXYVxAiZdhkgTFxBqyaXXYifJJ6DzQePvmMFJ9ZBTJILwCTE" +
+//            "aqERCUtx4iFAHu2LBokASTIAK7y0Oh4yUFlN31EnpRMYO47onRDSLCje3rfMQxumEQQjL4THH0QQOXhdOGn7asvGKKKybbb150qA";
 
 
     public void  authorize () throws URISyntaxException, IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpGet tokenRequest = new HttpGet("https://spotify.com"); //??
         URI uri = new URIBuilder(tokenRequest.getURI())
-                .addParameter("token", TOKEN)
+               // .addParameter("token", TOKEN)
                 .build();
         ((HttpRequestBase) tokenRequest).setURI(uri);
         HttpResponse response = httpClient.execute(tokenRequest);

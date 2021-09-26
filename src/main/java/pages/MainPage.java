@@ -55,8 +55,8 @@ public class MainPage {
         return new PlayListPage(driver);
     }
 
-    public FavoriteTracksPage chooseFavoriteTracks(){
+    public FollowPage chooseFavoriteTracks(){
         favoriteTracks.click();
-        return new FavoriteTracksPage(driver);
+        return new FollowPage(driver);
     }
 }

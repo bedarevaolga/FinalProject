@@ -7,6 +7,11 @@ import org.apache.commons.codec.binary.Base64;
 //import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpStatus;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +19,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public class Autorization {
-  //  public static void main(String[] args)  {
+   public static void main(String[] args) throws IOException, URISyntaxException {
 
         //  String url = "https://accounts.spotify.com/authorize";
 
@@ -153,9 +158,9 @@ public class Autorization {
 //    }
 //}
 
-        //   URL obj = new URL(
-//                https://accounts.spotify.com/authorize?client_id=04c21be4154148c1a1ab1380500d4df7&response_type=code&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback
-        //);
+           URL obj = new URL(
+                "https://accounts.spotify.com/authorize?client_id=04c21be4154148c1a1ab1380500d4df7&response_type=code&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback&scope=user-read-private%20user-read-email"
+        );
 //        URLConnection conn = obj.openConnection();
 //
 //        //get all response headers
@@ -171,17 +176,44 @@ public class Autorization {
 //        System.out.println(result);
 //    }
 //}
+     //  URL url = new URL("http://www.google.com");
+       HttpURLConnection httpCon = (HttpURLConnection) obj.openConnection();
 
-//   public static String getToken() {
+       System.out.println( obj.getQuery());
+       System.out.println( obj.getContent());
+       System.out.println( obj.getFile());
+       System.out.println( obj.getPath());
+       System.out.println( obj.getRef());
+       System.out.println( obj.getRef());
+       System.out.println( obj.toURI());
+       System.out.println( obj.toExternalForm());
+
+     //  System.out.println("Response code is " + httpCon.getURL());
+     //  System.out.println("Response code is " + httpCon.getResponseMessage());
+      // System.out.println("Response code is " + httpCon.getHeaderField());
+      // System.out.println("Response code is " + httpCon.getHeaderFieldKey());
+      // System.out.println("Response code is " + httpCon.getContentEncoding());
+//       System.out.println("Response code is " + httpCon.getContent().toString());
+//      // System.out.println("Response code is " + httpCon.getRequestMethod());
+//       System.out.println("Response code is " + httpCon.toString());
+//      // System.out.println("Response code is " + httpCon.getRequestProperty());
+//      // System.out.println("Response code is " + httpCon.getResponseCode());
+//       System.out.println("Response code is " + httpCon.getInstanceFollowRedirects());
+//       System.out.println("Response code is " + httpCon.getPermission());
+//     //  System.out.println("Response code is " + httpCon.getContentLengthLong());
+//    //   System.out.println("Response code is " + httpCon.getRequestProperties());
+//       System.out.println("Response code is " + httpCon.getUseCaches());
+   }
+  // public static String getToken() {
 //      String token;
 //
 //        Map<String, String> body = new HashMap<>();
 //        body.put("grant_type", "authorization_code");
-//        body.put("code", "AQDICZQkcdU6HQhfQKve6AbcWA2e7F4OE3lxAohcODBOl2w0ZZtgAVsO5hMuQ8soZ0SE94r45_Mj8ux-qK4kyym4ND_RzroWoqWFRKbo5R6aQ-fNp-71rOGt5w6oeNrMIcEu8bILX2un_tgf8-NuU4IVkX789WQ16fKlmcfKpBs");
+//        body.put("code", "AQCDF4OHWT5N9AOp6CFILBRgjVKllZT5ZISfV0ZD8FraxrGQ27vX_DczJjMbvWJNBajj9TN14wf005q0Ue83Mx0PV5pnFAE9IVgnyAb-arCalEjFYHnb_6yMXPlKjjOR22zs2gMCvWg2HcJp1w5SOepmWRjpPO098yDRgeHPjsnhca-gbDUmegHHq-MjmzTm2N7n0iotUYlHgSOTvq2_GJIltQ4");
 //        body.put("redirect_uri", "https://example.com/callback");
 //
-//       // TokenResponse tokenResponse =
-//        Map<String, String> respObj=
+//        TokenResponse tokenResponse =
+//       // Map<String, String> respObj=
 //                given()
 //                .accept(ContentType.JSON)
 //                .queryParams(body)
@@ -192,21 +224,22 @@ public class Autorization {
 //                .assertThat()
 //                .statusCode(HttpStatus.SC_OK)
 //                .extract()
-//                .jsonPath()
-//                .getMap("$");
+//              //  .jsonPath()
+//               // .getMap("$")
 //
-////                .as(TokenResponse.class);
-////        token = tokenResponse.getAccessToken();
-//        System.out.println(respObj);
-//      //  return token;
+//               .as(TokenResponse.class);
+//        token = tokenResponse.getAccessToken();
+//
+//        System.out.println(token);
+//   //    return token;
 //    }
-//
-//
-//    static String createBasicAuthHeaderValue() {
-//        String auth = String.format("%s:%s", "04c21be4154148c1a1ab1380500d4df7",
-//                "3835dedb5236443c81e2ab7285e8f4cd");
-//        byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.ISO_8859_1));
-//        return "Basic " + new String(encodedAuth);
-//
-//    }
+
+
+    static String createBasicAuthHeaderValue() {
+        String auth = String.format("%s:%s", "04c21be4154148c1a1ab1380500d4df7",
+                "3835dedb5236443c81e2ab7285e8f4cd");
+        byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.ISO_8859_1));
+        return "Basic " + new String(encodedAuth);
+
+    }
 }

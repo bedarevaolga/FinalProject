@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.FollowPage;
 import pages.LoginPage;
 import pages.MainPage;
 import pages.PlayListPage;
@@ -19,19 +20,21 @@ public class LoginTest {
     public static MainPage mainPage;
     public static WebDriver driver;
     public static PlayListPage playListPage;
-   // private static Properties testProperties;
+    public static FollowPage followPage;
+    // private static Properties testProperties;
 
     @BeforeAll
-    public static void testSetup()  {
+    public static void testSetup() {
 
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
         mainPage = new MainPage(driver);
         playListPage = new PlayListPage(driver);
+        followPage = new FollowPage(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-       driver.get(Config.getURLMainPage());
+        driver.get(Config.getURLMainPage());
     }
 
     @Order(1)
@@ -77,6 +80,15 @@ public class LoginTest {
     }
 
     @Order(6)
+    @ParameterizedTest
+    @CsvSource({"Arctic Monkeys"})
+    public void testFollow(String artistName) {
+        mainPage.chooseFavoriteTracks();
+        followPage.findFavoriteArtist(artistName);
+        Assertions.assertEquals("ПОДПИСКА", followPage.subscription());
+    }
+
+    @Order(7)
     @Test
     public void testLogout() {
         mainPage.entryMenu();

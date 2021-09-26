@@ -52,6 +52,8 @@ public class PlayListPage {
     private WebElement deletePlayList;
 
     private static final By songNames = By.xpath("//div[@class = '_OpqIZJH2IqpNqAS9iJ7 vdyxMem0D6h0FIowNo2D']");
+    private static final By deleteBtn = By.xpath("//button[text()=\"УДАЛИТЬ\"]");
+    private static final By itemsListOfPlayList = By.xpath("//div[@class=\"fv_p2bOQDpaYqm4EI6Ho mKF9Weo988YLlpmmr_Q4\"]");
 
     public PlayListPage addComposition(String artistName, String songName) {
 
@@ -69,7 +71,7 @@ public class PlayListPage {
     public PlayListPage deleteComposition(String artistName, String songName) {
         driver.navigate().refresh();
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver
-                .findElement(By.xpath("//div[@class=\"fv_p2bOQDpaYqm4EI6Ho mKF9Weo988YLlpmmr_Q4\"]")));
+                .findElement(itemsListOfPlayList));
         for (WebElement webElement : songsFromPlayList) {
             if (webElement.getText().contains(artistName) && webElement.getText().contains(songName)) {
                 Actions action = new Actions(driver);
@@ -100,7 +102,7 @@ public class PlayListPage {
         action.moveToElement(findPlayList(namePlayList)).contextClick().perform();
         driver.switchTo();
         deletePlayList.click();
-        driver.findElement(By.xpath("//button[text()=\"УДАЛИТЬ\"]")).click();
+        driver.findElement(deleteBtn).click();
         driver.navigate().refresh();
         return this;
     }
