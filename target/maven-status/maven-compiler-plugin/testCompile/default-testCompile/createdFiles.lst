@@ -1,0 +1,12 @@
+delete\Track.class
+api\steps\FollowPlayListStep.class
+api\steps\UsersProfileStep.class
+api\steps\ChangePlayListsDetailsStep.class
+api\TokenResponse.class
+api\runner\RunnerTest.class
+api\steps\CreatePlayListStep.class
+api\ApiAutorizationTest.class
+uiTest\LoginTest.class
+api\Autorization.class
+api\steps\AddSongsToPlaylistStep.class
+delete\ConfProperties.class

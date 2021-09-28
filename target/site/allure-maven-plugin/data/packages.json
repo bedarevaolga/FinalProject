@@ -1,0 +1,117 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "uiTest.LoginTest",
+    "children" : [ {
+      "name" : "testLogin",
+      "uid" : "436194abc405ee08",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822397191,
+        "stop" : 1632822412305,
+        "duration" : 15114
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testCreatePlayList",
+      "uid" : "4bd57ea83fb0e33b",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822412548,
+        "stop" : 1632822413953,
+        "duration" : 1405
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    }, {
+      "name" : "testAddCompositionToPlayList",
+      "uid" : "1ab8722765f17add",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822414425,
+        "stop" : 1632822423651,
+        "duration" : 9226
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testAddCompositionToPlayList",
+      "uid" : "e6e71cac917ec5",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822423684,
+        "stop" : 1632822433891,
+        "duration" : 10207
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testAddCompositionToPlayList",
+      "uid" : "c8069acf919dc418",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822433922,
+        "stop" : 1632822442375,
+        "duration" : 8453
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testDeleteCompositionToPlayList",
+      "uid" : "4b58f79758e65280",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822442411,
+        "stop" : 1632822453107,
+        "duration" : 10696
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "testDeletePlayList",
+      "uid" : "17e11ad914b296d3",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822453128,
+        "stop" : 1632822472137,
+        "duration" : 19009
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    }, {
+      "name" : "testFollow",
+      "uid" : "dead6ee5c7c38ea",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "failed",
+      "time" : {
+        "start" : 1632822472168,
+        "stop" : 1632822479807,
+        "duration" : 7639
+      },
+      "flaky" : true,
+      "parameters" : [ ]
+    }, {
+      "name" : "testLogout",
+      "uid" : "224f77811c61ad0",
+      "parentUid" : "bb67fde98d2601bb86bb85a4e5f86115",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822479909,
+        "stop" : 1632822486406,
+        "duration" : 6497
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "uiTest.LoginTest"
+  } ]
+}

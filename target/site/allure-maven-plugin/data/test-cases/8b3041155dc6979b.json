@@ -1,0 +1,54 @@
+{
+  "uid" : "8b3041155dc6979b",
+  "name" : "testLogout()",
+  "fullName" : "uiTest.LoginTest.testLogout",
+  "historyId" : "5254a27433e3d96ab5dc985cf36b4a1f",
+  "time" : {
+    "start" : 1632819654772,
+    "stop" : 1632819662629,
+    "duration" : 7857
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Probook"
+  }, {
+    "name" : "thread",
+    "value" : "8368@Probook.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testLogout"
+  }, {
+    "name" : "suite",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8b3041155dc6979b.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: uiTest.LoginTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 77.007 s <<< FAILURE! - in uiTest.LoginTest
+testCreatePlayList  Time elapsed: 1.556 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Ìîé ïëåéëèñò ¹ 3> but was: <Ìîé ïëåéëèñò ¹ 12>
+	at uiTest.LoginTest.testCreatePlayList(LoginTest.java:62)
+
+testDeletePlayList{String}[1]  Time elapsed: 0.308 s  <<< ERROR!
+java.lang.IllegalArgumentException: Must provide a location for a move action.
+	at uiTest.LoginTest.testDeletePlayList(LoginTest.java:90)
+
+testFollow{String}[1]  Time elapsed: 4.59 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <ÏÎÄÏÈÑÊÀ> but was: <ÏÎÄÏÈÑÀÒÜÑß>
+	at uiTest.LoginTest.testFollow(LoginTest.java:102)
+

@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -19,31 +20,17 @@ public class PlayListPage {
     @FindBy(xpath = "//input[@placeholder='Поиск треков и выпусков']")
     private WebElement trackSearch;
 
-    @FindBy(xpath = "//div[@class=\"_OpqIZJH2IqpNqAS9iJ7 vdyxMem0D6h0FIowNo2D\"]")
-    private List<WebElement> sonsOptions;
-
     @FindBy(xpath = "//div[@class=\"os-content\"]/descendant::span[contains(text(),\"плейлист\")]")
     private List<WebElement> playLists;
 
-    private static final By addToPlayList = By.xpath("//button[@data-testid=\"add-to-playlist-button\"]");
-    private static final By buttonMore = By.xpath("//button[@class=\"HeBhibwzuyWAXBm9vJlm\"]");
     @FindBy(xpath = "//button[@aria-label=\"Очистить строку поиска\"]")
     private WebElement cleanSearch;
 
     @FindBy(xpath = "//div[@data-testid=\"playlist-tracklist\"]")
     private WebElement sonsFromPlayListGeneral;
-    //@FindBy(xpath = "//div[@class=\"_OpqIZJH2IqpNqAS9iJ7 vdyxMem0D6h0FIowNo2D\"]")
 
     @FindBy(xpath = "//div[@class=\"fv_p2bOQDpaYqm4EI6Ho mKF9Weo988YLlpmmr_Q4\"]//div[@class=\"_OpqIZJH2IqpNqAS9iJ7 vdyxMem0D6h0FIowNo2D\"]")
     private List<WebElement> songsFromPlayList;
-
-    @FindBy(xpath = "//div[@aria-rowindex=\"1\"]/descendant::button[@data-testid=\"add-to-playlist-button\"]")
-    private WebElement addSong;
-
-    @FindBy(xpath = "//div[@aria-rowindex= \"1\"]")
-    private WebElement firstSong;
-
-    private static final  By menuOfSong = By.xpath("//button[@class=\"YFghzhgfbeZjLqvWpGN3 UKlKqmvWCgJYNym_fw5P\"]");
 
     @FindBy(xpath = "//span[text()=\"Удалить из этого плейлиста\"]")
     private WebElement deleteFromPlayList;
@@ -51,10 +38,13 @@ public class PlayListPage {
     @FindBy(xpath = "//span[contains(text(),\"Удалить\")]")
     private WebElement deletePlayList;
 
+    private static final By addToPlayList = By.xpath("//button[@data-testid=\"add-to-playlist-button\"]");
+    private static final By buttonMore = By.xpath("//button[@class=\"HeBhibwzuyWAXBm9vJlm\"]");
     private static final By songNames = By.xpath("//div[@class = '_OpqIZJH2IqpNqAS9iJ7 vdyxMem0D6h0FIowNo2D']");
     private static final By deleteBtn = By.xpath("//button[text()=\"УДАЛИТЬ\"]");
     private static final By itemsListOfPlayList = By.xpath("//div[@class=\"fv_p2bOQDpaYqm4EI6Ho mKF9Weo988YLlpmmr_Q4\"]");
 
+    @Step("add composition  to Playlist ")
     public PlayListPage addComposition(String artistName, String songName) {
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", trackSearch);
@@ -68,6 +58,7 @@ public class PlayListPage {
         return this;
     }
 
+    @Step("delete composition {0} from Playlist ")
     public PlayListPage deleteComposition(String artistName, String songName) {
         driver.navigate().refresh();
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver
@@ -97,6 +88,7 @@ public class PlayListPage {
         return (playListInformation.contains(artistName) && playListInformation.contains(songName));
     }
 
+    @Step("delete PlayList {0}")
     public PlayListPage deletePlayList(String namePlayList) {
         Actions action = new Actions(driver);
         action.moveToElement(findPlayList(namePlayList)).contextClick().perform();

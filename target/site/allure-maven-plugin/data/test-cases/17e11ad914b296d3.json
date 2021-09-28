@@ -1,0 +1,113 @@
+{
+  "uid" : "17e11ad914b296d3",
+  "name" : "[1] Мой плейлист № 3",
+  "fullName" : "uiTest.LoginTest.testDeletePlayList",
+  "historyId" : "b9cd4b0ce27590929a93e58ecc9ae5fc",
+  "time" : {
+    "start" : 1632822453128,
+    "stop" : 1632822472137,
+    "duration" : 19009
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Probook"
+  }, {
+    "name" : "thread",
+    "value" : "3360@Probook.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testDeletePlayList"
+  }, {
+    "name" : "suite",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "de134ab0819e1c73",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822105123,
+        "stop" : 1632822127392,
+        "duration" : 22269
+      }
+    }, {
+      "uid" : "34d3f9396e896cc1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632819982915,
+        "stop" : 1632819997934,
+        "duration" : 15019
+      }
+    }, {
+      "uid" : "34fea6aae023f7d9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632819631714,
+        "stop" : 1632819648629,
+        "duration" : 16915
+      }
+    }, {
+      "uid" : "addc35489444ac23",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632817487670,
+        "stop" : 1632817502659,
+        "duration" : 14989
+      }
+    }, {
+      "uid" : "e7b6d84f9736d0a4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632817063156,
+        "stop" : 1632817078121,
+        "duration" : 14965
+      }
+    }, {
+      "uid" : "601b147d279d7d99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632816538385,
+        "stop" : 1632816550616,
+        "duration" : 12231
+      }
+    }, {
+      "uid" : "1cd0f8a8192faab7",
+      "status" : "broken",
+      "statusDetails" : "Must provide a location for a move action.",
+      "time" : {
+        "start" : 1632814691078,
+        "stop" : 1632814691371,
+        "duration" : 293
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "17e11ad914b296d3.json",
+  "parameterValues" : [ ]
+}

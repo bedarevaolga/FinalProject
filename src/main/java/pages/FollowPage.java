@@ -22,8 +22,7 @@ public class FollowPage {
     private WebElement bestResultOfSearch;
     @FindBy(xpath = "//button[contains(@class,\"_2qGqWaiZbWlHPjjDGxS\")]")
     private WebElement followBtn;
-//    @FindBy(xpath = "//button[text()=\"Подписка\"]")
-//    private WebElement subscriptionBtn;
+
     public FollowPage findFavoriteArtist(String artistName) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", findItem);
         findItem.click();

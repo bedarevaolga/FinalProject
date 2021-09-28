@@ -1,0 +1,54 @@
+{
+  "uid" : "16a85dd74616dbac",
+  "name" : "[3] Madonna, Frozen",
+  "fullName" : "uiTest.LoginTest.testAddCompositionToPlayList",
+  "historyId" : "c539017eaac607a10ab172fa91870b5f",
+  "time" : {
+    "start" : 1632819962303,
+    "stop" : 1632819971362,
+    "duration" : 9059
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Probook"
+  }, {
+    "name" : "thread",
+    "value" : "10436@Probook.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testAddCompositionToPlayList"
+  }, {
+    "name" : "suite",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "16a85dd74616dbac.json",
+  "parameterValues" : [ ]
+}

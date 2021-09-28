@@ -1,0 +1,112 @@
+{
+  "uid" : "224f77811c61ad0",
+  "name" : "testLogout()",
+  "fullName" : "uiTest.LoginTest.testLogout",
+  "historyId" : "5254a27433e3d96ab5dc985cf36b4a1f",
+  "time" : {
+    "start" : 1632822479909,
+    "stop" : 1632822486406,
+    "duration" : 6497
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Probook"
+  }, {
+    "name" : "thread",
+    "value" : "3360@Probook.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testLogout"
+  }, {
+    "name" : "suite",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "ea674a64ba9c0461",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822133452,
+        "stop" : 1632822139753,
+        "duration" : 6301
+      }
+    }, {
+      "uid" : "d85b5ab8f31b980a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632820003790,
+        "stop" : 1632820009686,
+        "duration" : 5896
+      }
+    }, {
+      "uid" : "8b3041155dc6979b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632819654772,
+        "stop" : 1632819662629,
+        "duration" : 7857
+      }
+    }, {
+      "uid" : "1bf7572a9e258810",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632817506613,
+        "stop" : 1632817512288,
+        "duration" : 5675
+      }
+    }, {
+      "uid" : "957a383bedd344a0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632817083225,
+        "stop" : 1632817088565,
+        "duration" : 5340
+      }
+    }, {
+      "uid" : "244b2d40a211817f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632816555374,
+        "stop" : 1632816560923,
+        "duration" : 5549
+      }
+    }, {
+      "uid" : "ded13cd522c8bf9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632814695986,
+        "stop" : 1632814699787,
+        "duration" : 3801
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "224f77811c61ad0.json",
+  "parameterValues" : [ ]
+}

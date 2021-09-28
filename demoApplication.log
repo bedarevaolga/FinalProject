@@ -1,0 +1,19 @@
+2021-09-28 12:46:36 INFO  LoginTest:45 - Site opened
+2021-09-28 12:46:45 INFO  LoginTest:56 - Initialization completed
+2021-09-28 12:46:52 INFO  LoginTest:59 - Assertion testLogin passed
+2021-09-28 12:46:53 INFO  LoginTest:66 - PlayList is created
+2021-09-28 12:46:53 INFO  LoginTest:68 - Assertion testCreatePlayList passed
+2021-09-28 12:47:03 INFO  LoginTest:76 - composition is added
+2021-09-28 12:47:03 INFO  LoginTest:78 - Assertion testAddCompositionToPlayList passed
+2021-09-28 12:47:13 INFO  LoginTest:76 - composition is added
+2021-09-28 12:47:13 INFO  LoginTest:78 - Assertion testAddCompositionToPlayList passed
+2021-09-28 12:47:21 INFO  LoginTest:76 - composition is added
+2021-09-28 12:47:22 INFO  LoginTest:78 - Assertion testAddCompositionToPlayList passed
+2021-09-28 12:47:28 INFO  LoginTest:86 - composition is deleted
+2021-09-28 12:47:33 INFO  LoginTest:88 - Assertion testDeleteCompositionToPlayList passed
+2021-09-28 12:47:34 INFO  LoginTest:96 - playlist deleted
+2021-09-28 12:47:52 INFO  LoginTest:98 - playlist testDeletePlayList deleted
+2021-09-28 12:47:59 INFO  LoginTest:107 - follow an artist completed
+2021-09-28 12:48:00 INFO  LoginTest:117 - user logout
+2021-09-28 12:48:06 INFO  LoginTest:119 - Assertion testLogout passed
+2021-09-28 12:48:07 INFO  LoginTest:126 - site closed

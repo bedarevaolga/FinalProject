@@ -1,0 +1,113 @@
+{
+  "uid" : "4bd57ea83fb0e33b",
+  "name" : "testCreatePlayList()",
+  "fullName" : "uiTest.LoginTest.testCreatePlayList",
+  "historyId" : "c5ea08c5ec39517bbc7ffc4a76cc03d0",
+  "time" : {
+    "start" : 1632822412548,
+    "stop" : 1632822413953,
+    "duration" : 1405
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Probook"
+  }, {
+    "name" : "thread",
+    "value" : "3360@Probook.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCreatePlayList"
+  }, {
+    "name" : "suite",
+    "value" : "uiTest.LoginTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "dcaea9569ebc5303",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632822062206,
+        "stop" : 1632822063478,
+        "duration" : 1272
+      }
+    }, {
+      "uid" : "e9d4fbaa92f1a59c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632819941867,
+        "stop" : 1632819943004,
+        "duration" : 1137
+      }
+    }, {
+      "uid" : "3e9982a64535f29",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632819587788,
+        "stop" : 1632819589053,
+        "duration" : 1265
+      }
+    }, {
+      "uid" : "ce8c4c6bb573aeeb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632817453758,
+        "stop" : 1632817455910,
+        "duration" : 2152
+      }
+    }, {
+      "uid" : "318ea5d8e7da4132",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632817031935,
+        "stop" : 1632817033979,
+        "duration" : 2044
+      }
+    }, {
+      "uid" : "fb7c58ab636df941",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632816505893,
+        "stop" : 1632816507620,
+        "duration" : 1727
+      }
+    }, {
+      "uid" : "68c43ba18137adbe",
+      "status" : "failed",
+      "statusDetails" : "expected: <Мой плейлист № 3> but was: <Мой плейлист № 12>",
+      "time" : {
+        "start" : 1632814656191,
+        "stop" : 1632814657729,
+        "duration" : 1538
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4bd57ea83fb0e33b.json",
+  "parameterValues" : [ ]
+}
