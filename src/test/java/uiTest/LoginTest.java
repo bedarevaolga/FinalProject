@@ -46,6 +46,7 @@ public class LoginTest {
 
     }
 
+    @Tag("uitest")
     @Order(1)
     @Test
     public void testLogin() {
@@ -59,6 +60,7 @@ public class LoginTest {
         log.info("Assertion testLogin passed");
     }
 
+    @Tag("uitest")
     @Order(2)
     @Test
     public void testCreatePlayList() {
@@ -68,6 +70,7 @@ public class LoginTest {
         log.info("Assertion testCreatePlayList passed");
     }
 
+    @Tag("uitest")
     @Order(3)
     @ParameterizedTest
     @CsvSource({"AC/DC, Highway to Hell", "Dido, White Flag", "Madonna, Frozen"})
@@ -78,6 +81,7 @@ public class LoginTest {
         log.info("Assertion testAddCompositionToPlayList passed");
     }
 
+    @Tag("uitest")
     @Order(4)
     @ParameterizedTest
     @CsvSource({"Madonna, Frozen"})
@@ -88,6 +92,7 @@ public class LoginTest {
         log.info("Assertion testDeleteCompositionToPlayList passed");
     }
 
+    @Tag("uitest")
     @Order(5)
     @ParameterizedTest
     @CsvSource({"Мой плейлист № 3"})
@@ -98,6 +103,7 @@ public class LoginTest {
         log.info("playlist testDeletePlayList deleted");
     }
 
+    @Tag("uitest")
     @Order(6)
     @ParameterizedTest
     @CsvSource({"Arctic Monkeys"})
@@ -109,6 +115,7 @@ public class LoginTest {
         log.info("Assertion  testFollow passed");
     }
 
+    @Tag("uitest")
     @Order(7)
     @Test
     public void testLogout() {
