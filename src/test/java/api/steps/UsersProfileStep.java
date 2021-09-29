@@ -4,13 +4,16 @@ import config.Config;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
+import uiTest.LoginTest;
 
 import static io.restassured.RestAssured.given;
 
 public class UsersProfileStep {
 
     private String response;
+    private static Logger log = Logger.getLogger(UsersProfileStep.class);
 
     @And("user is getting a User's Profile")
     public void getUserProfile() {
@@ -27,6 +30,7 @@ public class UsersProfileStep {
                         .statusCode(200)
                         .extract()
                         .asString();
+        //log
     }
 
     @Then("user is checking User's information")

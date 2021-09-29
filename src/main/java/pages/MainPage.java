@@ -29,10 +29,13 @@ public class MainPage {
     private WebElement createPlayList;
     @FindBy(xpath = "//span[text()=\"Любимые треки\"]")
     private WebElement favoriteTracks;
+    @FindBy(xpath = "//button[@class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\"]")
+    private WebElement closecookie;
 
     public String getUserName() {
         return userName.getText();
     }
+
     public String getLoginButton() {
         return loginButton.getText();
     }
@@ -50,13 +53,18 @@ public class MainPage {
         return new LoginPage(driver);
     }
 
-    public PlayListPage createPlayList(){
+    public PlayListPage createPlayList() {
         createPlayList.click();
         return new PlayListPage(driver);
     }
 
-    public FollowPage chooseFavoriteTracks(){
+    public FollowPage chooseFavoriteTracks() {
         favoriteTracks.click();
         return new FollowPage(driver);
+    }
+
+    public MainPage closeCookie() {
+        closecookie.click();
+        return this;
     }
 }

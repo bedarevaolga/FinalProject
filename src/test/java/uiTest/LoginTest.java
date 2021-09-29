@@ -58,6 +58,7 @@ public class LoginTest {
         String user = mainPage.getUserName();
         Assertions.assertEquals(Config.USER_NAME, user);
         log.info("Assertion testLogin passed");
+        mainPage.closeCookie();
     }
 
     @Tag("uitest")
