@@ -2,7 +2,7 @@
 @PlayList
 Feature: Using Spotify
 
-  @smoke
+  @smoke ##
   Scenario: Get a User's Profile
    # When a user is logged in Spotify
     And user is getting a User's Profile
