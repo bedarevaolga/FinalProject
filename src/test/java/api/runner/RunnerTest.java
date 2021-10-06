@@ -2,7 +2,6 @@ package api.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import org.junit.jupiter.api.Tag;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
@@ -11,6 +10,5 @@ import org.junit.runner.RunWith;
         glue = {"api.steps"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-@Tag("RunnerApi")
 public class RunnerTest {
 }

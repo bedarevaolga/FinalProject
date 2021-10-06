@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayListPage {
-    public WebDriver driver;// privat?
+    private WebDriver driver;
 
     public PlayListPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -19,22 +19,16 @@ public class PlayListPage {
 
     @FindBy(xpath = "//input[@placeholder='Поиск треков и выпусков']")
     private WebElement trackSearch;
-
     @FindBy(xpath = "//div[@class=\"os-content\"]/descendant::span[contains(text(),\"плейлист\")]")
     private List<WebElement> playLists;
-
     @FindBy(xpath = "//button[@aria-label=\"Очистить строку поиска\"]")
     private WebElement cleanSearch;
-
     @FindBy(xpath = "//div[@data-testid=\"playlist-tracklist\"]")
     private WebElement sonsFromPlayListGeneral;
-
     @FindBy(xpath = "//div[@class=\"fv_p2bOQDpaYqm4EI6Ho mKF9Weo988YLlpmmr_Q4\"]//div[@class=\"_OpqIZJH2IqpNqAS9iJ7 vdyxMem0D6h0FIowNo2D\"]")
     private List<WebElement> songsFromPlayList;
-
     @FindBy(xpath = "//span[text()=\"Удалить из этого плейлиста\"]")
     private WebElement deleteFromPlayList;
-
     @FindBy(xpath = "//span[contains(text(),\"Удалить\")]")
     private WebElement deletePlayList;
 

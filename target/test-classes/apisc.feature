@@ -2,23 +2,21 @@
 @PlayList
 Feature: Using Spotify
 
+  @smoke
   Scenario: Get a User's Profile
-   # When a user is logged in Spotify
-    And user is getting a User's Profile
-    Then user is checking User's information
 
+    When user is getting a User's Profile
+    Then user is checking User's information
 
   Scenario: Create new PlayList
 
-   # When a user is logged in Spotify
-    And user is creating new PlayList
+    When user is creating new PlayList
     And get PlayList ID
     Then playList is created
 
   Scenario: Add songs to PlayList
 
-    #When a user is logged in Spotify
-    And user is adding  to PlayList songs
+    When user is adding  to PlayList songs
       | spotify:track:3Zvo4oKr1SRCIgfmHAuQlA |
       | spotify:track:4wowwlvO7hJpWlDBXj14Bg |
       | spotify:track:1z9MKbbqDIUGn1zhJTqBnA |
@@ -31,8 +29,7 @@ Feature: Using Spotify
 
   Scenario: Follow a PlayList
 
-   # When a user is logged in Spotify
-    And user is following a PlayList
+    When user is following a PlayList
       | 1z1i1gzN6vNJxBi2JMMgSj |
     And get List of PlayLists
     Then user is finding PlayList from List
@@ -40,18 +37,16 @@ Feature: Using Spotify
 
   Scenario: Change a Playlist's Details
 
-    #When a user is logged in Spotify
-    And user is Change a Playlist's Name
-    |Updated Playlist Name 888|
+    When user is Change a Playlist's Name
+      | Updated Playlist Name |
     And get List of PlayLists
     Then user is finding PlayList from List
-      | Updated Playlist Name 888 |
+      | Updated Playlist Name |
 
   Scenario: Unfollow a  Playlist
 
-    #When a user is logged in Spotify
-    And user is Unfollowing a  Playlist
+    When user is Unfollowing a  Playlist
       | 1z1i1gzN6vNJxBi2JMMgSj |
     And get List of PlayLists
-   Then user is checking of removing a  Playlist
+    Then user is checking of removing a  Playlist
       | Плейлист для бега от TIMERMAN. Part 2 |

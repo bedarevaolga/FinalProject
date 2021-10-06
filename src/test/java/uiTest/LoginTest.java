@@ -12,7 +12,6 @@ import pages.LoginPage;
 import pages.MainPage;
 import pages.PlayListPage;
 
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -23,8 +22,7 @@ public class LoginTest {
     public static WebDriver driver;
     public static PlayListPage playListPage;
     public static FollowPage followPage;
-//    private static Properties testProperties;
-    private static Logger log = Logger.getLogger(LoginTest.class);
+    private static final Logger log = Logger.getLogger(LoginTest.class);
 
     @BeforeAll
     public static void testSetup() {
@@ -35,10 +33,6 @@ public class LoginTest {
         mainPage = new MainPage(driver);
         playListPage = new PlayListPage(driver);
         followPage = new FollowPage(driver);
- //       testProperties = new Properties();
-//        for (Object entry : testProperties.entrySet()) {
-//            log.debug("property value:"+entry.toString());
-//        }
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(Config.getURLMainPage());
@@ -67,7 +61,7 @@ public class LoginTest {
     public void testCreatePlayList() {
         mainPage.createPlayList();
         log.info("PlayList is created");
-        Assertions.assertEquals("Мой плейлист № 3", playListPage.getPlayListName());
+        Assertions.assertEquals("Мой плейлист № 2", playListPage.getPlayListName());
         log.info("Assertion testCreatePlayList passed");
     }
 
@@ -96,7 +90,7 @@ public class LoginTest {
     @Tag("uitest")
     @Order(5)
     @ParameterizedTest
-    @CsvSource({"Мой плейлист № 3"})
+    @CsvSource({"Мой плейлист № 2"})
     public void testDeletePlayList(String namePlayList) {
         playListPage.deletePlayList(namePlayList);
         log.info("playlist deleted");

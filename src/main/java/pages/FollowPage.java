@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class FollowPage {
-    private final WebDriver driver;// private?
+    private final WebDriver driver;
 
     public FollowPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -32,9 +32,8 @@ public class FollowPage {
         followBtn.click();
         return this;
     }
+
     public String subscription() {
-       return followBtn.getText();
-
+        return followBtn.getText();
     }
-
 }
