@@ -1,59 +1,19 @@
-2021-10-06 15:44:52 INFO  UsersProfileStep:35 - got user info
-2021-10-06 15:44:53 INFO  UsersProfileStep:47 - assertion  checkUsersInformation passed 
-2021-10-06 15:44:55 INFO  CreatePlayListStep:44 - playList is created
-2021-10-06 15:44:55 INFO  CreatePlayListStep:57 - playListID is 0i631yh12tXJRv37LjvogT
-2021-10-06 15:44:55 INFO  CreatePlayListStep:64 - Assertion checkIsPlayListCreated passed
-2021-10-06 15:44:55 INFO  AddSongsToPlaylistStep:34 - songspotify:track:3Zvo4oKr1SRCIgfmHAuQlAis added
-2021-10-06 15:44:55 INFO  AddSongsToPlaylistStep:34 - songspotify:track:4wowwlvO7hJpWlDBXj14Bgis added
-2021-10-06 15:44:56 INFO  AddSongsToPlaylistStep:34 - songspotify:track:1z9MKbbqDIUGn1zhJTqBnAis added
-2021-10-06 15:44:56 INFO  AddSongsToPlaylistStep:54 - SongsList from Playlist is received 
-2021-10-06 15:44:56 INFO  AddSongsToPlaylistStep:66 - Playlist contains Song: Хочешь?
-2021-10-06 15:44:56 INFO  AddSongsToPlaylistStep:66 - Playlist contains Song: пммл - Live
-2021-10-06 15:44:56 INFO  AddSongsToPlaylistStep:66 - Playlist contains Song: Знак бесконечность
-2021-10-06 15:44:56 INFO  FollowPlayListStep:36 - user follow playList 1z1i1gzN6vNJxBi2JMMgSj
-2021-10-06 15:44:57 INFO  FollowPlayListStep:70 - users playLists is received
-2021-10-06 15:44:57 INFO  FollowPlayListStep:76 -  assertion isPlayListAddedToListOfPlayList for playList Плейлист для бега от TIMERMAN. Part 2 passed
-2021-10-06 15:44:57 INFO  ChangePlayListsDetailsStep:38 - playList 6c2Bk3NG24pqM7ontU3GDs change name on: Updated Playlist Name
-2021-10-06 15:44:57 INFO  FollowPlayListStep:70 - users playLists is received
-2021-10-06 15:44:57 INFO  FollowPlayListStep:76 -  assertion isPlayListAddedToListOfPlayList for playList Updated Playlist Name passed
-2021-10-06 15:44:58 INFO  FollowPlayListStep:52 - user unfollow playList 1z1i1gzN6vNJxBi2JMMgSj
-2021-10-06 15:44:58 INFO  FollowPlayListStep:70 - users playLists is received
-2021-10-06 15:44:58 INFO  FollowPlayListStep:82 -  assertion isPlayListAddedToListOfPlayList passed
-2021-10-06 15:54:27 INFO  LoginTest:39 - Site opened
-2021-10-06 15:54:34 INFO  LoginTest:51 - Initialization completed
-2021-10-06 15:54:43 INFO  LoginTest:54 - Assertion testLogin passed
-2021-10-06 15:54:43 INFO  LoginTest:63 - PlayList is created
-2021-10-06 15:54:45 INFO  LoginTest:65 - Assertion testCreatePlayList passed
-2021-10-06 15:54:54 INFO  LoginTest:74 - composition is added
-2021-10-06 15:54:55 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
-2021-10-06 15:55:04 INFO  LoginTest:74 - composition is added
-2021-10-06 15:55:05 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
-2021-10-06 15:55:15 INFO  LoginTest:74 - composition is added
-2021-10-06 15:55:16 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
-2021-10-06 15:55:28 INFO  LoginTest:85 - composition is deleted
-2021-10-06 15:55:29 INFO  LoginTest:87 - Assertion testDeleteCompositionToPlayList passed
-2021-10-06 15:55:36 INFO  LoginTest:108 - follow an artist completed
-2021-10-06 15:55:36 INFO  LoginTest:110 - Assertion  testFollow passed
-2021-10-06 15:55:37 INFO  LoginTest:119 - user logout
-2021-10-06 15:55:42 INFO  LoginTest:121 - Assertion testLogout passed
-2021-10-06 15:55:45 INFO  LoginTest:128 - site closed
-2021-10-06 15:57:11 INFO  LoginTest:39 - Site opened
-2021-10-06 15:57:21 INFO  LoginTest:51 - Initialization completed
-2021-10-06 15:57:28 INFO  LoginTest:54 - Assertion testLogin passed
-2021-10-06 15:57:30 INFO  LoginTest:63 - PlayList is created
-2021-10-06 15:57:31 INFO  LoginTest:65 - Assertion testCreatePlayList passed
-2021-10-06 15:57:40 INFO  LoginTest:74 - composition is added
-2021-10-06 15:57:41 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
-2021-10-06 15:57:49 INFO  LoginTest:74 - composition is added
-2021-10-06 15:57:50 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
-2021-10-06 15:58:00 INFO  LoginTest:74 - composition is added
-2021-10-06 15:58:01 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
-2021-10-06 15:58:13 INFO  LoginTest:85 - composition is deleted
-2021-10-06 15:58:14 INFO  LoginTest:87 - Assertion testDeleteCompositionToPlayList passed
-2021-10-06 15:58:16 INFO  LoginTest:96 - playlist deleted
-2021-10-06 15:58:28 INFO  LoginTest:98 - playlist testDeletePlayList deleted
-2021-10-06 15:58:35 INFO  LoginTest:108 - follow an artist completed
-2021-10-06 15:58:35 INFO  LoginTest:110 - Assertion  testFollow passed
-2021-10-06 15:58:36 INFO  LoginTest:119 - user logout
-2021-10-06 15:58:42 INFO  LoginTest:121 - Assertion testLogout passed
-2021-10-06 15:58:47 INFO  LoginTest:128 - site closed
+2021-10-06 17:12:40 INFO  LoginTest:39 - Site opened
+2021-10-06 17:12:48 INFO  LoginTest:51 - Initialization completed
+2021-10-06 17:12:56 INFO  LoginTest:54 - Assertion testLogin passed
+2021-10-06 17:12:58 INFO  LoginTest:63 - PlayList is created
+2021-10-06 17:12:59 INFO  LoginTest:65 - Assertion testCreatePlayList passed
+2021-10-06 17:13:09 INFO  LoginTest:74 - composition is added
+2021-10-06 17:13:09 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
+2021-10-06 17:13:22 INFO  LoginTest:74 - composition is added
+2021-10-06 17:13:22 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
+2021-10-06 17:13:31 INFO  LoginTest:74 - composition is added
+2021-10-06 17:13:32 INFO  LoginTest:76 - Assertion testAddCompositionToPlayList passed
+2021-10-06 17:13:41 INFO  LoginTest:85 - composition is deleted
+2021-10-06 17:13:49 INFO  LoginTest:87 - Assertion testDeleteCompositionToPlayList passed
+2021-10-06 17:13:51 INFO  LoginTest:96 - playlist deleted
+2021-10-06 17:14:08 INFO  LoginTest:98 - playlist testDeletePlayList deleted
+2021-10-06 17:14:15 INFO  LoginTest:108 - follow an artist completed
+2021-10-06 17:14:16 INFO  LoginTest:119 - user logout
+2021-10-06 17:14:22 INFO  LoginTest:121 - Assertion testLogout passed
+2021-10-06 17:14:23 INFO  LoginTest:128 - site closed

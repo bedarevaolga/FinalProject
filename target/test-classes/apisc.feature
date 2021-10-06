@@ -1,8 +1,7 @@
 # language: en
-@PlayList
+
 Feature: Using Spotify
 
-  @smoke
   Scenario: Get a User's Profile
 
     When user is getting a User's Profile

@@ -31,32 +31,32 @@ public class PlayListPage {
     private WebElement deleteFromPlayList;
     @FindBy(xpath = "//span[contains(text(),\"Удалить\")]")
     private WebElement deletePlayList;
-
+    @FindBy(xpath = "//div[@class = '_OpqIZJH2IqpNqAS9iJ7 vdyxMem0D6h0FIowNo2D']")
+    private WebElement songNames;
+    @FindBy(xpath = "//button[text()=\"УДАЛИТЬ\"]")
+    private WebElement deleteBtn;
+    @FindBy(xpath = "//div[@class=\"fv_p2bOQDpaYqm4EI6Ho mKF9Weo988YLlpmmr_Q4\"]")
+    private WebElement itemsListOfPlayList;
+    @FindBy(xpath = "//button[@class=\"HeBhibwzuyWAXBm9vJlm\"]")
+    private WebElement buttonMore;
     private static final By addToPlayList = By.xpath("//button[@data-testid=\"add-to-playlist-button\"]");
-    private static final By buttonMore = By.xpath("//button[@class=\"HeBhibwzuyWAXBm9vJlm\"]");
-    private static final By songNames = By.xpath("//div[@class = '_OpqIZJH2IqpNqAS9iJ7 vdyxMem0D6h0FIowNo2D']");
-    private static final By deleteBtn = By.xpath("//button[text()=\"УДАЛИТЬ\"]");
-    private static final By itemsListOfPlayList = By.xpath("//div[@class=\"fv_p2bOQDpaYqm4EI6Ho mKF9Weo988YLlpmmr_Q4\"]");
 
-    @Step("add composition  to Playlist ")
     public PlayListPage addComposition(String artistName, String songName) {
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", trackSearch);
         trackSearch.click();
         trackSearch.sendKeys(artistName + " " + songName + "\n");
-        driver.findElement(songNames).findElement(addToPlayList).click();
+        songNames.findElement(addToPlayList).click();
         cleanSearch.click();
         driver.navigate().refresh();
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver.findElement(buttonMore));
-        driver.findElement(buttonMore).click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", buttonMore);
+        buttonMore.click();
         return this;
     }
 
-    @Step("delete composition {0} from Playlist ")
     public PlayListPage deleteComposition(String artistName, String songName) {
         driver.navigate().refresh();
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver
-                .findElement(itemsListOfPlayList));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", itemsListOfPlayList);
         for (WebElement webElement : songsFromPlayList) {
             if (webElement.getText().contains(artistName) && webElement.getText().contains(songName)) {
                 Actions action = new Actions(driver);
@@ -82,13 +82,12 @@ public class PlayListPage {
         return (playListInformation.contains(artistName) && playListInformation.contains(songName));
     }
 
-    @Step("delete PlayList {0}")
     public PlayListPage deletePlayList(String namePlayList) {
         Actions action = new Actions(driver);
         action.moveToElement(findPlayList(namePlayList)).contextClick().perform();
         driver.switchTo();
         deletePlayList.click();
-        driver.findElement(deleteBtn).click();
+        deleteBtn.click();
         driver.navigate().refresh();
         return this;
     }
