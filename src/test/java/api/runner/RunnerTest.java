@@ -1,5 +1,4 @@
 package api.runner;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -8,7 +7,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/apisc.feature",
         glue = {"api.steps"},
-        snippets = CucumberOptions.SnippetType.CAMELCASE
-)
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        tags = "@Api")
+
 public class RunnerTest {
 }
