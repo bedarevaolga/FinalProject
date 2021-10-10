@@ -1,4 +1,4 @@
-package config;
+package configuration;
 
 public class Config {
 
@@ -13,7 +13,7 @@ public class Config {
     }
 
     public static String getToken() {
-        return "BQA_TBde0RoO1yDcCHKbuFmUlxfE_JWM61uBvuJSujXfl8j6fq5ziluNNs_t4Uml7PVhhljcQyiaMWRG-9T7-a4QOngYK_6B3EmWzMNAFziafW04qZXhCglk0SKUwihPZQyTpflYJiupxCT1Fj8mbqxEjUAijp3EZtgPpu8lCN66eRZ6__3qk7L7CtKbrk3DjgmVmLh5XjnDgJ0HTm7KYt8cbxIK-X3WxQ3twcKqNqSTGEwkRYbgiKQ5waK8N8eOnvgL4BX3N6lfj6QQb6OWu5rv";
+        return "BQChoGebauFaQyzxufLbXSB5UTBUbrzQNY8cHZGB4EHcw4ZHhsRXbuPmwT0i8nDhTTGMIxhXhUBg_3xDdy_KVDzhtbcPRpQRMI0qfOhyANNPvAC09GugmrZSgSANsbi22CuhxCgCNSduqyrapF1tcZzWV5XxcvqWcDkE_hM-yugGno6lwBS8qv9v2HF7BGZcTf9BwWzy2-rzkvmTEHkUqFCSIylAD1hCp8dtp4zghEiSkuWvRajswvkDsl2FVTX6c1ffeIeeUl2ay1guevH0-2j9";
     }
 
     public static String playListIDforChanging() {

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class MainPage {
     private final WebDriver driver;
 
@@ -27,6 +29,8 @@ public class MainPage {
     private WebElement favoriteTracks;
     @FindBy(xpath = "//button[@class=\"onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon\"]")
     private WebElement closecookie;
+    @FindBy(xpath = "//span[@class=\"vQ8EkR_krbAi5mYmmpCn IAK6xuovwdsi5JG9DSTx\"]")
+    private List<WebElement> listOfPlayList;
 
     public String getUserName() {
         return userName.getText();
@@ -42,6 +46,21 @@ public class MainPage {
 
     public void userLogout() {
         logoutBtn.click();
+    }
+
+    public int numberOfPlayLists() {
+        driver.navigate().refresh();
+       return listOfPlayList.size();
+    }
+
+    public PlayListPage findPlayList(String playListName) {
+        for (WebElement webElement : listOfPlayList) {
+          if(webElement.getText().equals(playListName)) {
+              webElement.click();
+              return new PlayListPage(driver);
+          }
+        }
+        return null;
     }
 
     public LoginPage login() {
@@ -63,4 +82,5 @@ public class MainPage {
         closecookie.click();
         return this;
     }
+
 }

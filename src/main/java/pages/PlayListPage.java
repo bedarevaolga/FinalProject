@@ -55,8 +55,9 @@ public class PlayListPage {
     }
 
     public PlayListPage deleteComposition(String artistName, String songName) {
-        driver.navigate().refresh();
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", itemsListOfPlayList);
+    //    driver.navigate().refresh();
+       // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", itemsListOfPlayList);
+     ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
         for (WebElement webElement : songsFromPlayList) {
             if (webElement.getText().contains(artistName) && webElement.getText().contains(songName)) {
                 Actions action = new Actions(driver);
@@ -65,14 +66,12 @@ public class PlayListPage {
                 driver.switchTo();
                 deleteFromPlayList.click();
                 driver.navigate().refresh();
+                return this;
             }
         }
         return this;
     }
 
-    public String getPlayListName() {
-        return playLists.get(0).getText();
-    }
 
     public boolean isCompositionAddedToPlayList(String artistName, String songName) {
         Actions action = new Actions(driver);

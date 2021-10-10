@@ -1,6 +1,6 @@
 package api.steps;
 
-import config.Config;
+import configuration.Config;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

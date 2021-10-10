@@ -10,6 +10,7 @@ import org.apache.http.Header;
 
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.HttpGet;
+import org.junit.jupiter.api.Test;
 //import org.json.JSONObject;
 
 //import org.apache.commons.httpclient.HttpClient;
@@ -26,7 +27,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public class Autorization {
-    public static void main(String[] args) {
+   // public static void main(String[] args) {
 
         //  String url = "https://accounts.spotify.com/authorize";
 
@@ -97,9 +98,9 @@ public class Autorization {
 //
 //
         //"https://accounts.spotify.com/authorize?client_id=04c21be4154148c1a1ab1380500d4df7&response_type=code&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback").openStream())) {
-      //   https://accounts.spotify.com/authorize?client_id=04c21be4154148c1a1ab1380500d4df7&response_type=code&redirect_uri=https%253A%252F%252Fexample.com%252Fcallback&scope=user-read-private%2520user-read-email
+        //   https://accounts.spotify.com/authorize?client_id=04c21be4154148c1a1ab1380500d4df7&response_type=code&redirect_uri=https%253A%252F%252Fexample.com%252Fcallback&scope=user-read-private%2520user-read-email
 
-      //  var response =
+        //  var response =
 
 
 //                given()
@@ -118,7 +119,7 @@ public class Autorization {
 //                        .all()
 //                        .statusCode(200);
 //        //       .extract().body().xmlPath().get().name();
- //   }
+        //   }
 //
 ////                        .toString();
 ////         .extract().header("Location")
@@ -259,46 +260,65 @@ public class Autorization {
         // public static String getToken() {
 //        String token;
 //
-        Map<String, String> body = new HashMap<>();
+//        Map<String, String> body = new HashMap<>();
+//        body.put("grant_type", "authorization_code");
+//        body.put("code", "AQCqsItd4uXRu_iFt0YB9agi5nqUE4UDBmHr2mecSeV8n5PT1F7YqXTvQOhQqgiuLHmA4P0YJFeeH9RBIsX71YNlkyv2YeLEiKpu1Ri_Xo3RjcE1P1flAgw_icBM2R5PjAHr0LKCAePctRTqOd2DepI7ijLtjy4QLxY3Ta_8C5LVOh73hrr9UDER_0Zxz_EzY4eq911OxZtrzebqaiI6Z0E0cQ");
+//        body.put("redirect_uri", "http://mysite.com/callback");
+//
+//        TokenResponse tokenResponse =
+//                //  Map<String, String> respObj=
+//                given()
+//                        .accept(ContentType.JSON)
+//                        .queryParams(body)
+//                        .header("Authorization", createBasicAuthHeaderValue())
+//                        .when()
+//                        .post("https://accounts.spotify.com/api/token")
+//                        .then()
+//                        .assertThat()
+//                        .statusCode(HttpStatus.SC_OK)
+//                        .extract()
+//                        // .jsonPath()
+//                        //  .getMap("$");
+//
+//                        .as(TokenResponse.class);
+//        String token = tokenResponse.getAccessToken();
+//
+//        System.out.println(token);
+//        //    return token;
+//
+//    }
+
+   // https://accounts.spotify.com/authorize?client_id=04c21be4154148c1a1ab1380500d4df7&response_type=code&redirect_uri=http%3A%2F%2Fmysite.com%2Fcallback%2F&scope=user-read-email%20user-read-private
+        @Test
+    public void tokenRestAssuredTest() {
+            Map<String, String> body = new HashMap<>();
         body.put("grant_type", "authorization_code");
-        body.put("code", "AQB_v1VyqSbr3dZ6FhqJGqOPJaf88gkYsMtEFj7NIbm3nS8pF7C76pGBpVj1alPJrBR29XJVQ0eFevaf25kAGNrL7WKXshauO3M74uIwMf5Cpj0LrDD82j-32OithR8Dki3JxKEWN1sXIs3qfBwcTPJYtRWWSjjEtoP-10Ogjtp7FEOUjcnnsQiL_MupXjeS4YYTLipSD-q8cxUCA9wj62xAPtf5");
-        body.put("redirect_uri", "https://example.com/callback");
-
-      //  TokenResponse tokenResponse =
-                Map<String, String> respObj=
-                given()
-                        .accept(ContentType.JSON)
-                        .queryParams(body)
-                        .header("Authorization", createBasicAuthHeaderValue())
-                        .when()
-                        .post("https://accounts.spotify.com/api/token")
-                        .then()
-                        .assertThat()
-                        .statusCode(HttpStatus.SC_OK)
-                        .extract()
-                          .jsonPath()
-                         .getMap("$");
-
-                      // / .as(TokenResponse.class);
-       // token = tokenResponse.getAccessToken();
+        body.put("code", "AQCEs1sRI9KBdi-JlroDiTMfYxZbEOEbrMzfT08jID4iwh0O8XTlxxxeFovQSM7UPxqezf29DJi1XRFLnNRGFZvebosjg4KcLEydbnaw5xcQ8guTAJvN_eDuX3Nu9lQ6ATYlwfQ-MnHT4kYDVLdD1acJYg5zHB_tZlamCo7OotyykVseywLJZ1zrrKnZQbJKWw8TFGsd_to7Fafw9l2Q-Y7sdQ");
+        body.put("redirect_uri", "http://mysite.com/callback");
+        Map<String, String> respObj = given()
+                .contentType("application/x-www-form-urlencoded; charset=utf-8")
+                .header("Authorization", createBasicAuthHeaderValue())
+                .queryParams(body)
+                .log()
+                .all()
+                .when()
+                .post("https://accounts.spotify.com/api/token")
+                .then()
+                .log()
+                .all()
+                .statusCode(200)
+                .extract()
+                .jsonPath()
+                .getMap("$");
 
         System.out.println(respObj);
-        //    return token;
-
     }
 
-    static String createBasicAuthHeaderValue() {
+    private String createBasicAuthHeaderValue() {
         String auth = String.format("%s:%s", "04c21be4154148c1a1ab1380500d4df7",
                 "3835dedb5236443c81e2ab7285e8f4cd");
         byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(StandardCharsets.ISO_8859_1));
         return "Basic " + new String(encodedAuth);
-
     }
-//    static HttpResponse sendGetRequest(String ultimateUri) throws IOException {
-//        HttpClient httpClient =  HttpClientBuilder.create().build();
-//        HttpRequestBase request = new HttpGet(ultimateUri);
-//    //    headersProvider.setDefaultHeaders(request);
-//        HttpResponse response = httpClient.execute(request);
-//        return response;
-//    }
 }
+

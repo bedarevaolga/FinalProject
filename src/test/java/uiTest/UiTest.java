@@ -1,6 +1,6 @@
 package uiTest;
 
-import config.Config;
+import configuration.Config;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -14,15 +14,14 @@ import pages.PlayListPage;
 
 import java.util.concurrent.TimeUnit;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class LoginTest {
+public class UiTest {
 
     public static LoginPage loginPage;
     public static MainPage mainPage;
     public static WebDriver driver;
     public static PlayListPage playListPage;
     public static FollowPage followPage;
-    private static final Logger log = Logger.getLogger(LoginTest.class);
+    private static final Logger log = Logger.getLogger(UiTest.class);
 
     @BeforeAll
     public static void testSetup() {
@@ -37,39 +36,33 @@ public class LoginTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(Config.getURLMainPage());
         log.info("Site opened");
-
-    }
-
-    @Tag("uitest")
-    @Order(1)
-    @Test
-    public void testLogin() {
         mainPage.login();
         loginPage.inputLogin(Config.USER_LOGIN);
         loginPage.inputPasswd(Config.USER_PASSWORD);
         loginPage.clickLoginBtn();
         log.info("Initialization completed");
-        String user = mainPage.getUserName();
-        Assertions.assertEquals(Config.USER_NAME, user);
-        log.info("Assertion testLogin passed");
         mainPage.closeCookie();
     }
 
     @Tag("uitest")
-    @Order(2)
     @Test
     public void testCreatePlayList() {
+        int numberOfPL = mainPage.numberOfPlayLists();
+        log.info("number of PlayLists at this moment is : " + numberOfPL);
         mainPage.createPlayList();
         log.info("PlayList is created");
-        Assertions.assertEquals("Мой плейлист № 2", playListPage.getPlayListName());
+        int numberOfPLAfterCreating = mainPage.numberOfPlayLists();
+        Assertions.assertEquals(numberOfPL+1, numberOfPLAfterCreating);
+        log.info("new number of PlayLists at this moment after creating new PL is: " + numberOfPLAfterCreating);
         log.info("Assertion testCreatePlayList passed");
     }
 
     @Tag("uitest")
-    @Order(3)
     @ParameterizedTest
-    @CsvSource({"AC/DC, Highway to Hell", "Dido, White Flag", "Madonna, Frozen"})
-    public void testAddCompositionToPlayList(String artistName, String songName) {
+    @CsvSource({"AC/DC, Highway to Hell, Мой плейлист № 2", "Dido, White Flag, Мой плейлист № 2", "Madonna, Frozen, Мой плейлист № 2"})
+    public void testAddCompositionToPlayList(String artistName, String songName, String playListName) {
+        mainPage.findPlayList(playListName);
+        log.info("Play List is found");
         playListPage.addComposition(artistName, songName);
         log.info("composition is added");
         Assertions.assertTrue(playListPage.isCompositionAddedToPlayList(artistName, songName));
@@ -77,29 +70,28 @@ public class LoginTest {
     }
 
     @Tag("uitest")
-    @Order(4)
     @ParameterizedTest
-    @CsvSource({"Madonna, Frozen"})
-    public void testDeleteCompositionToPlayList(String artistName, String songName) {
+    @CsvSource({"Ace of Base, All That She Wants, Мой плейлист № 3"})
+    public void testDeleteCompositionToPlayList(String artistName, String songName, String playListName) {
+        mainPage.findPlayList(playListName);
+        log.info("Play List is found");
         playListPage.deleteComposition(artistName, songName);
-        log.info("composition is deleted");
+        log.info("composition " + songName + " is deleted");
         Assertions.assertFalse(playListPage.isCompositionAddedToPlayList(artistName, songName));
         log.info("Assertion testDeleteCompositionToPlayList passed");
     }
 
     @Tag("uitest")
-    @Order(5)
     @ParameterizedTest
-    @CsvSource({"Мой плейлист № 2"})
+    @CsvSource({"Мой плейлист № 4"})
     public void testDeletePlayList(String namePlayList) {
         playListPage.deletePlayList(namePlayList);
-        log.info("playlist deleted");
+        log.info("playlist " + namePlayList + " deleted");
         Assertions.assertFalse(playListPage.getListOfPlayListName().contains(namePlayList));
-        log.info("playlist testDeletePlayList deleted");
+        log.info("Assertion testDeletePlayList passed");
     }
 
     @Tag("uitest")
-    @Order(6)
     @ParameterizedTest
     @CsvSource({"Arctic Monkeys"})
     public void testFollow(String artistName) {
@@ -110,19 +102,11 @@ public class LoginTest {
         log.info("Assertion  testFollow passed");
     }
 
-    @Tag("uitest")
-    @Order(7)
-    @Test
-    public void testLogout() {
+    @AfterAll
+    public static void tearDown() {
         mainPage.entryMenu();
         mainPage.userLogout();
         log.info("user logout");
-        Assertions.assertEquals("ВОЙТИ", mainPage.getLoginButton());
-        log.info("Assertion testLogout passed");
-    }
-
-    @AfterAll
-    public static void tearDown() {
         driver.close();
         driver.quit();
         log.info("site closed");
