@@ -1,8 +1,11 @@
-# Project exclude paths
+.idea
+*.iml
+out
+gen
+/target/
+*.jarv
+target
 *.log
-
 *.db
-
-/target
-
 .idea/
+cromedriver2.exe
