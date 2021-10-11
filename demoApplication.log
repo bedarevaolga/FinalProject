@@ -1,24 +1,114 @@
-2021-10-10 14:41:43 INFO  UiTest:38 - Site opened
-2021-10-10 14:41:46 INFO  UiTest:43 - Initialization completed
-2021-10-10 14:41:56 INFO  UiTest:89 - playlist Мой плейлист № 4 deleted
-2021-10-10 14:42:00 INFO  UiTest:91 - Assertion testDeletePlayList passed
-2021-10-10 14:42:01 INFO  UiTest:65 - Play List is found
-2021-10-10 14:42:10 INFO  UiTest:67 - composition is added
-2021-10-10 14:42:10 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
-2021-10-10 14:42:11 INFO  UiTest:65 - Play List is found
-2021-10-10 14:42:20 INFO  UiTest:67 - composition is added
-2021-10-10 14:42:21 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
-2021-10-10 14:42:21 INFO  UiTest:65 - Play List is found
-2021-10-10 14:42:31 INFO  UiTest:67 - composition is added
-2021-10-10 14:42:31 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
-2021-10-10 14:42:32 INFO  UiTest:77 - Play List is found
-2021-10-10 14:42:34 INFO  UiTest:79 - composition All That She Wants is deleted
-2021-10-10 14:42:42 INFO  UiTest:81 - Assertion testDeleteCompositionToPlayList passed
-2021-10-10 14:42:48 INFO  UiTest:100 - follow an artist completed
-2021-10-10 14:42:48 INFO  UiTest:102 - Assertion  testFollow passed
-2021-10-10 14:42:55 INFO  UiTest:51 - number of PlayLists at this moment is : 3
-2021-10-10 14:42:55 INFO  UiTest:53 - PlayList is created
-2021-10-10 14:43:02 INFO  UiTest:56 - new number of PlayLists at this moment after creating new PL is: 4
-2021-10-10 14:43:02 INFO  UiTest:57 - Assertion testCreatePlayList passed
-2021-10-10 14:43:03 INFO  UiTest:109 - user logout
-2021-10-10 14:43:09 INFO  UiTest:112 - site closed
+2021-10-11 12:19:04 INFO  UiTest:38 - Site opened
+2021-10-11 12:19:11 INFO  UiTest:43 - Initialization completed
+2021-10-11 12:19:23 INFO  UiTest:89 - playlist Мой плейлист № 4 deleted
+2021-10-11 12:19:29 INFO  UiTest:91 - Assertion testDeletePlayList passed
+2021-10-11 12:19:30 INFO  UiTest:65 - Play List is found
+2021-10-11 12:19:41 INFO  UiTest:67 - composition is added
+2021-10-11 12:19:42 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:19:42 INFO  UiTest:65 - Play List is found
+2021-10-11 12:19:51 INFO  UiTest:67 - composition is added
+2021-10-11 12:19:51 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:19:52 INFO  UiTest:65 - Play List is found
+2021-10-11 12:19:59 INFO  UiTest:67 - composition is added
+2021-10-11 12:20:00 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:20:00 INFO  UiTest:77 - Play List is found
+2021-10-11 12:20:02 INFO  UiTest:79 - composition All That She Wants is deleted
+2021-10-11 12:20:08 INFO  UiTest:81 - Assertion testDeleteCompositionToPlayList passed
+2021-10-11 12:20:14 INFO  UiTest:100 - follow an artist completed
+2021-10-11 12:20:25 INFO  UiTest:51 - number of PlayLists at this moment is : 0
+2021-10-11 12:22:48 INFO  UiTest:38 - Site opened
+2021-10-11 12:22:55 INFO  UiTest:43 - Initialization completed
+2021-10-11 12:23:06 INFO  UiTest:89 - playlist Мой плейлист № 4 deleted
+2021-10-11 12:23:10 INFO  UiTest:91 - Assertion testDeletePlayList passed
+2021-10-11 12:23:11 INFO  UiTest:65 - Play List is found
+2021-10-11 12:23:22 INFO  UiTest:65 - Play List is found
+2021-10-11 12:23:32 INFO  UiTest:65 - Play List is found
+2021-10-11 12:23:43 INFO  UiTest:77 - Play List is found
+2021-10-11 12:23:45 INFO  UiTest:79 - composition All That She Wants is deleted
+2021-10-11 12:23:51 INFO  UiTest:81 - Assertion testDeleteCompositionToPlayList passed
+2021-10-11 12:23:57 INFO  UiTest:100 - follow an artist completed
+2021-10-11 12:23:57 INFO  UiTest:102 - Assertion  testFollow passed
+2021-10-11 12:24:04 INFO  UiTest:51 - number of PlayLists at this moment is : 3
+2021-10-11 12:24:04 INFO  UiTest:53 - PlayList is created
+2021-10-11 12:24:14 INFO  UiTest:56 - new number of PlayLists at this moment after creating new PL is: 4
+2021-10-11 12:24:14 INFO  UiTest:57 - Assertion testCreatePlayList passed
+2021-10-11 12:24:15 INFO  UiTest:109 - user logout
+2021-10-11 12:24:20 INFO  UiTest:112 - site closed
+2021-10-11 12:27:16 INFO  UiTest:38 - Site opened
+2021-10-11 12:27:23 INFO  UiTest:43 - Initialization completed
+2021-10-11 12:27:35 INFO  UiTest:89 - playlist Мой плейлист № 4 deleted
+2021-10-11 12:27:39 INFO  UiTest:91 - Assertion testDeletePlayList passed
+2021-10-11 12:27:40 INFO  UiTest:65 - Play List is found
+2021-10-11 12:27:52 INFO  UiTest:67 - composition is added
+2021-10-11 12:27:52 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:27:53 INFO  UiTest:65 - Play List is found
+2021-10-11 12:28:01 INFO  UiTest:67 - composition is added
+2021-10-11 12:28:02 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:28:02 INFO  UiTest:65 - Play List is found
+2021-10-11 12:28:10 INFO  UiTest:67 - composition is added
+2021-10-11 12:28:10 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:28:11 INFO  UiTest:77 - Play List is found
+2021-10-11 12:28:13 INFO  UiTest:79 - composition All That She Wants is deleted
+2021-10-11 12:28:19 INFO  UiTest:81 - Assertion testDeleteCompositionToPlayList passed
+2021-10-11 12:28:24 INFO  UiTest:100 - follow an artist completed
+2021-10-11 12:28:24 INFO  UiTest:102 - Assertion  testFollow passed
+2021-10-11 12:28:29 INFO  UiTest:51 - number of PlayLists at this moment is : 3
+2021-10-11 12:28:29 INFO  UiTest:53 - PlayList is created
+2021-10-11 12:28:35 INFO  UiTest:56 - new number of PlayLists at this moment after creating new PL is: 4
+2021-10-11 12:28:35 INFO  UiTest:57 - Assertion testCreatePlayList passed
+2021-10-11 12:28:37 INFO  UiTest:109 - user logout
+2021-10-11 12:28:39 INFO  UiTest:112 - site closed
+2021-10-11 12:32:33 INFO  UiTest:38 - Site opened
+2021-10-11 12:32:40 INFO  UiTest:43 - Initialization completed
+2021-10-11 12:32:50 INFO  UiTest:89 - playlist Мой плейлист № 4 deleted
+2021-10-11 12:32:56 INFO  UiTest:91 - Assertion testDeletePlayList passed
+2021-10-11 12:32:57 INFO  UiTest:65 - Play List is found
+2021-10-11 12:33:08 INFO  UiTest:67 - composition is added
+2021-10-11 12:33:08 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:33:09 INFO  UiTest:65 - Play List is found
+2021-10-11 12:33:18 INFO  UiTest:67 - composition is added
+2021-10-11 12:33:18 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:33:19 INFO  UiTest:65 - Play List is found
+2021-10-11 12:33:27 INFO  UiTest:67 - composition is added
+2021-10-11 12:33:27 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:33:28 INFO  UiTest:77 - Play List is found
+2021-10-11 12:33:30 INFO  UiTest:79 - composition All That She Wants is deleted
+2021-10-11 12:33:35 INFO  UiTest:81 - Assertion testDeleteCompositionToPlayList passed
+2021-10-11 12:33:41 INFO  UiTest:100 - follow an artist completed
+2021-10-11 12:33:41 INFO  UiTest:102 - Assertion  testFollow passed
+2021-10-11 12:33:47 INFO  UiTest:51 - number of PlayLists at this moment is : 3
+2021-10-11 12:33:48 INFO  UiTest:53 - PlayList is created
+2021-10-11 12:33:54 INFO  UiTest:56 - new number of PlayLists at this moment after creating new PL is: 4
+2021-10-11 12:33:54 INFO  UiTest:57 - Assertion testCreatePlayList passed
+2021-10-11 12:33:55 INFO  UiTest:109 - user logout
+2021-10-11 12:34:00 INFO  UiTest:112 - site closed
+2021-10-11 12:39:38 INFO  UiTest:38 - Site opened
+2021-10-11 12:39:45 INFO  UiTest:43 - Initialization completed
+2021-10-11 12:39:57 INFO  UiTest:89 - playlist Мой плейлист № 4 deleted
+2021-10-11 12:40:01 INFO  UiTest:91 - Assertion testDeletePlayList passed
+2021-10-11 12:40:02 INFO  UiTest:65 - Play List is found
+2021-10-11 12:40:11 INFO  UiTest:67 - composition is added
+2021-10-11 12:40:12 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:40:12 INFO  UiTest:65 - Play List is found
+2021-10-11 12:40:20 INFO  UiTest:67 - composition is added
+2021-10-11 12:40:21 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:40:22 INFO  UiTest:65 - Play List is found
+2021-10-11 12:40:32 INFO  UiTest:67 - composition is added
+2021-10-11 12:40:32 INFO  UiTest:69 - Assertion testAddCompositionToPlayList passed
+2021-10-11 12:40:33 INFO  UiTest:77 - Play List is found
+2021-10-11 12:40:35 INFO  UiTest:79 - composition All That She Wants is deleted
+2021-10-11 12:40:43 INFO  UiTest:81 - Assertion testDeleteCompositionToPlayList passed
+2021-10-11 12:40:48 INFO  UiTest:100 - follow an artist completed
+2021-10-11 12:40:49 INFO  UiTest:102 - Assertion  testFollow passed
+2021-10-11 12:40:55 INFO  UiTest:51 - number of PlayLists at this moment is : 3
+2021-10-11 12:40:56 INFO  UiTest:53 - PlayList is created
+2021-10-11 12:41:01 INFO  UiTest:56 - new number of PlayLists at this moment after creating new PL is: 4
+2021-10-11 12:41:01 INFO  UiTest:57 - Assertion testCreatePlayList passed
+2021-10-11 12:41:02 INFO  UiTest:109 - user logout
+2021-10-11 12:41:05 INFO  UiTest:112 - site closed
+2021-10-11 12:42:41 INFO  UiTest:31 - Site opened
+2021-10-11 12:42:48 INFO  UiTest:44 - Initialization completed
+2021-10-11 12:42:56 INFO  UiTest:47 - Assertion testLogin passed
+2021-10-11 12:42:58 INFO  UiTest:58 - user logout
+2021-10-11 12:43:04 INFO  UiTest:60 - Assertion testLogout passed
+2021-10-11 12:43:07 INFO  UiTest:67 - site closed
