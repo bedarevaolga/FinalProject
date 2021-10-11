@@ -23,7 +23,7 @@ public class UsersProfileStep {
         response = given()
                 .accept(ContentType.JSON)
                 .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + Config.getToken())
+                .header("Authorization", "Bearer " + Config.TOKEN)
                 .when()
                 .get(url)
                 .then()

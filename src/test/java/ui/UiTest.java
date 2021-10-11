@@ -34,7 +34,7 @@ public class UiTest {
         followPage = new FollowPage(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(Config.getURLMainPage());
+        driver.get(Config.MAIN_PAGE_URL);
         log.info("Site opened");
         mainPage.login();
         loginPage.inputLogin(Config.USER_LOGIN);

@@ -27,7 +27,7 @@ public class LoginLogoutTest {
         mainPage = new MainPage(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(Config.getURLMainPage());
+        driver.get(Config.MAIN_PAGE_URL);
         log.info("Site opened");
 
     }

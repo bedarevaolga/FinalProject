@@ -32,7 +32,7 @@ public class CreatePlayListStep {
         String url = "https://api.spotify.com/v1/users/vr1i2zt2s6d8z0kokb0oovlxg/playlists";
         response = given()
                 .contentType("application/json")
-                .header("Authorization", "Bearer " + Config.getToken())
+                .header("Authorization", "Bearer " + Config.TOKEN)
                 .body(body)
                 .when()
                 .post(url)

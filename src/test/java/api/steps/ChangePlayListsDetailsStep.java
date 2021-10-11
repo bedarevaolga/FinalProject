@@ -17,7 +17,7 @@ public class ChangePlayListsDetailsStep {
     @When("user is Change a Playlist's Name")
     public void changeNameOfPlayList(String updatedNameOfPlayList) {
 
-        String url = "https://api.spotify.com/v1/playlists/" + Config.playListIDforChanging();
+        String url = "https://api.spotify.com/v1/playlists/" + Config.PLAY_LIST_ID_FOR_CHANGING;
 
         Map<String, String> name = new HashMap<>();
         name.put("name", updatedNameOfPlayList);
@@ -28,14 +28,14 @@ public class ChangePlayListsDetailsStep {
         given()
                 .accept(ContentType.JSON)
                 .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + Config.getToken())
+                .header("Authorization", "Bearer " + Config.TOKEN)
                 .body(name)
                 .params(condition)
                 .when()
                 .put(url)
                 .then()
                 .statusCode(200);
-       log.info("playList " + Config.playListIDforChanging() + " change name on: " + updatedNameOfPlayList);
+       log.info("playList " + Config.PLAY_LIST_ID_FOR_CHANGING + " change name on: " + updatedNameOfPlayList);
     }
 }
 

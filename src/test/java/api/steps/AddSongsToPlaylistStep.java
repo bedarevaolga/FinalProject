@@ -19,12 +19,12 @@ public class AddSongsToPlaylistStep {
     @When("user is adding  to PlayList songs")
     public void addSongsToPlaylist(List<String> songs) {
 
-        String url = "https://api.spotify.com/v1/playlists/" + Config.playListIDforChanging() + "/tracks";
+        String url = "https://api.spotify.com/v1/playlists/" + Config.PLAY_LIST_ID_FOR_CHANGING + "/tracks";
         for (String song : songs) {
             given()
                     .accept("application/json")
                     .contentType("application/json")
-                    .header("Authorization", "Bearer " + Config.getToken())
+                    .header("Authorization", "Bearer " + Config.TOKEN)
                     .queryParam("uris", song)
                     .when()
                     .post(url)
@@ -36,13 +36,13 @@ public class AddSongsToPlaylistStep {
 
     @And("get List of Song from PlayList")
     public String getSongsListFromPlaylist() {
-        String url = "https://api.spotify.com/v1/playlists/" + Config.playListIDforChanging() + "/tracks";
+        String url = "https://api.spotify.com/v1/playlists/" + Config.PLAY_LIST_ID_FOR_CHANGING + "/tracks";
 
         response =
                 given()
                         .accept("application/json")
                         .contentType("application/json")
-                        .header("Authorization", "Bearer " + Config.getToken())
+                        .header("Authorization", "Bearer " + Config.TOKEN)
                         .when()
                         .get(url)
                         .then()
