@@ -1,6 +1,5 @@
 package pages;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayListPage {
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public PlayListPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -55,9 +54,7 @@ public class PlayListPage {
     }
 
     public PlayListPage deleteComposition(String artistName, String songName) {
-    //    driver.navigate().refresh();
-       // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", itemsListOfPlayList);
-     ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
         for (WebElement webElement : songsFromPlayList) {
             if (webElement.getText().contains(artistName) && webElement.getText().contains(songName)) {
                 Actions action = new Actions(driver);

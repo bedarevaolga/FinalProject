@@ -1,5 +1,5 @@
 # language: en
-@Api
+
 Feature: Using Spotify
 
   Scenario: Get a User's Profile

@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/apisc.feature",
         glue = {"api.steps"},
-        snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@Api")
+        snippets = CucumberOptions.SnippetType.CAMELCASE
+        )
 
 public class RunnerTest {
 }
