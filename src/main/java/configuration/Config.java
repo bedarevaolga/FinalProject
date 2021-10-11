@@ -8,12 +8,16 @@ public class Config {
     public static final String USER_ID = "vr1i2zt2s6d8z0kokb0oovlxg";
 
 
+    private Config() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static String getURLMainPage() {
         return "https://open.spotify.com";
     }
 
     public static String getToken() {
-        return "BQCrl-XaDjdG53cHEm88lcGrCUKRYGuBwYqDV5LvvbLb9J2bD56_vYj-PYiYSjQgaVvHeSLFhqeFqCyYVXiPOVSo3AmxibM4CdA0-UR0wE1ErHZhMM7TnoDuBNvAF7YAmF8MhGh-SsExYtIyEQu1VPMpl3dniH6BFXp8BMObCJxHtdgqHKKoeKmyur_OwBcxsmLByr7_hm1brywd-hg1DXiNcnbwJ2DHqNK6MTcGyUl-_FmHULZ2Egm8PCzQKnhK109TVsw95xTI9SZoWlUVpvnN";
+        return "BQBUVMIbGrTbEYqCBDkI1E9T975eMEb2-UCamRImJgC1AhSf_nqkUYJ0OzDJQnTEt7Is-u0JaYmgtaHRiKhG9c8NWhjKlahgSAGWsqwJa25eg3mqfmoJkuacs4wdtbsG7uGRp6-U-M6szOZvg7uSyHG17WmI31e_wAi1N9krWmPktPjNOXwyO325tjdadIoDGYg3HgeKiT9hXUli_1uuoDc5w72SZrMcfbCOlfmqZTsKTTCA_7imDUFsr2XeWH_iLpb2_br3XhTnk9mE0prq0Ibo";
     }
 
     public static String playListIDforChanging() {

@@ -112,3 +112,24 @@
 2021-10-11 12:42:58 INFO  UiTest:58 - user logout
 2021-10-11 12:43:04 INFO  UiTest:60 - Assertion testLogout passed
 2021-10-11 12:43:07 INFO  UiTest:67 - site closed
+2021-10-11 12:58:26 INFO  UsersProfileStep:33 - got user info
+2021-10-11 12:58:26 INFO  UsersProfileStep:45 - assertion  checkUsersInformation passed 
+2021-10-11 12:58:29 INFO  CreatePlayListStep:44 - playList is created
+2021-10-11 12:58:29 INFO  CreatePlayListStep:57 - playListID is 4InzDRDyRCU5IuqFMqtqnY
+2021-10-11 12:58:29 INFO  CreatePlayListStep:64 - Assertion checkIsPlayListCreated passed
+2021-10-11 12:58:29 INFO  AddSongsToPlaylistStep:33 - songspotify:track:3Zvo4oKr1SRCIgfmHAuQlAis added
+2021-10-11 12:58:30 INFO  AddSongsToPlaylistStep:33 - songspotify:track:4wowwlvO7hJpWlDBXj14Bgis added
+2021-10-11 12:58:30 INFO  AddSongsToPlaylistStep:33 - songspotify:track:1z9MKbbqDIUGn1zhJTqBnAis added
+2021-10-11 12:58:30 INFO  AddSongsToPlaylistStep:53 - SongsList from Playlist is received 
+2021-10-11 12:58:30 INFO  AddSongsToPlaylistStep:65 - Playlist contains Song: Хочешь?
+2021-10-11 12:58:30 INFO  AddSongsToPlaylistStep:65 - Playlist contains Song: пммл - Live
+2021-10-11 12:58:30 INFO  AddSongsToPlaylistStep:65 - Playlist contains Song: Знак бесконечность
+2021-10-11 12:58:30 INFO  FollowPlayListStep:36 - user follow playList 1z1i1gzN6vNJxBi2JMMgSj
+2021-10-11 12:58:31 INFO  FollowPlayListStep:70 - users playLists is received
+2021-10-11 12:58:31 INFO  FollowPlayListStep:76 -  assertion isPlayListAddedToListOfPlayList for playList Плейлист для бега от TIMERMAN. Part 2 passed
+2021-10-11 12:58:31 INFO  ChangePlayListsDetailsStep:38 - playList 6c2Bk3NG24pqM7ontU3GDs change name on: Updated Playlist Name
+2021-10-11 12:58:31 INFO  FollowPlayListStep:70 - users playLists is received
+2021-10-11 12:58:31 INFO  FollowPlayListStep:76 -  assertion isPlayListAddedToListOfPlayList for playList Updated Playlist Name passed
+2021-10-11 12:58:31 INFO  FollowPlayListStep:52 - user unfollow playList 1z1i1gzN6vNJxBi2JMMgSj
+2021-10-11 12:58:32 INFO  FollowPlayListStep:70 - users playLists is received
+2021-10-11 12:58:32 INFO  FollowPlayListStep:82 -  assertion isPlayListAddedToListOfPlayList passed
